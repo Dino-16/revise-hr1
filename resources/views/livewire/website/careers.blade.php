@@ -17,7 +17,7 @@
             <!-- Job Listings Column -->
             <div @if($showDetails)
                 @class('col-md-6')
-                @else 
+                @else
                 @class('col-md-12')
                 @endif>
                 <div @class('row g-4')>
@@ -38,7 +38,7 @@
                     @endforeach
                 </div>
             </div>
-            
+
             <!-- Job Details Column -->
             @if($showDetails)
                 <div @class('col-md-6')>
@@ -52,12 +52,12 @@
                                 <span @class('badge bg-success me-1 mb-1')>{{ $jobs[0]['type'] }}</span>
                                 <span @class('badge bg-primary')>{{ $jobs[0]['location'] }}</span>
                             </div>
-                            
+
                             <div @class('mb-4')>
                                 <h5>Job Description</h5>
                                 <p>{{ $jobs[0]['full_description'] }}</p>
                             </div>
-                            
+
                             <div @class('mb-4')>
                                 <h5>Job Qualifications</h5>
                                 <ul class="list-unstyled">
@@ -66,7 +66,7 @@
                                     @endforeach
                                 </ul>
                             </div>
-                            
+
                             <div>
                                 <h5>Job Responsibilities</h5>
                                 <ul class="list-unstyled">
