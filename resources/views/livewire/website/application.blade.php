@@ -140,7 +140,7 @@
                                 >
                                 <label class="form-check-label" for="agreed-to-terms">
                                     I agree to the 
-                                    <a href="#" class="text-decoration-underline" data-bs-toggle="modal" data-bs-target="#privacyModal">terms and conditions</a>.
+                                    <a href="#termsAndConditions" class="text-decoration-underline" wire:click="viewTermsAndCondtions">terms and conditions</a>.
                                 </label>
                                 @error('agreedToTerms') <p class="text-danger ">{{ $message }}</p> @enderror
                             </div>
@@ -159,26 +159,53 @@
         </form>
     </div>
 
-    <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="privacyModalLabel">Privacy Statement</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                    At Jetlouge Travel, we are dedicated to protecting the privacy and personal data of all individuals who engage with our travel and tour recruitment services. When you apply or register with us, we collect only the necessary information such as your name, contact details, work history, and relevant travel documents to match you with suitable travel industry roles and experiences. All personal data is treated as strictly confidential and used exclusively for recruitment, placement, and coordination purposes within the travel and tourism sector.
-                    </p>
-                    <p>
-                    We do not share your information with third parties without your explicit consent, except when required by law or essential for processing your application with trusted partners. Jetlouge Travel uses secure systems and follows industry best practices to ensure your information remains protected. By using our services, you agree to the collection and use of your data as described in this statement. If you wish to access, update, or request deletion of your personal information, please reach out to our privacy team at any time.
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
+    @if($termsAndConditions)
+        <div class="container p-4 rounded shadow-sm" id="termsAndConditions">
+            <h2 class="text-primary fw-bold mb-4 text-center">Privacy Commitment</h2>
+            <p class="lead text-center">
+                At <strong>Jetlouge Travel</strong>, your privacy matters. We protect the personal data of everyone who engages with our travel and tour recruitment services.
+            </p>
+            <hr class="my-4">
+            <h4 class="fw-semibold text-dark">What We Collect</h4>
+            <p>
+                When you apply or register with us, we only collect the information needed to connect you with the right opportunities:
+            </p>
+            <ul class="list-unstyled ps-3">
+                <li>✔ Name and contact details</li>
+                <li>✔ Work history</li>
+                <li>✔ Relevant travel documents</li>
+            </ul>
+            <hr class="my-4">
+            <h4 class="fw-semibold text-dark">How We Use Your Data</h4>
+            <p>
+                All personal data is treated as <strong>strictly confidential</strong>. It is used exclusively for:
+            </p>
+            <ul class="list-unstyled ps-3">
+                <li>✔ Recruitment and placement</li>
+                <li>✔ Coordination within the travel and tourism sector</li>
+            </ul>
+            <hr class="my-4">
+            <h4 class="fw-semibold text-dark">Sharing Information</h4>
+            <p>
+                We never share your information with third parties without your explicit consent. The only exceptions are:
+            </p>
+            <ul class="list-unstyled ps-3">
+                <li>✔ When required by law</li>
+                <li>✔ When essential for processing your application with trusted partners</li>
+            </ul>
+            <hr class="my-4">
+            <h4 class="fw-semibold text-dark">Our Promise</h4>
+            <p>
+                Jetlouge Travel uses secure systems and follows industry best practices to keep your information safe. 
+                By using our services, you agree to the collection and use of your data as described in this statement.
+            </p>
+            <hr class="my-4">
+            <h4 class="fw-semibold text-dark">Your Rights</h4>
+            <p>
+                You may access, update, or request deletion of your personal information at any time. 
+                Please contact our <strong>privacy team</strong> for assistance.
+            </p>
         </div>
-    </div>
+    @endif
 
 </div>

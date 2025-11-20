@@ -33,12 +33,12 @@
                             </a>
                         </li>
                         <li @class('nav-item')>
-                            <a @class('nav-link d-flex align-items-center gap-1') href="">
+                            <a @class('nav-link d-flex align-items-center gap-1') href="{{ route('about') }}">
                                 <i class="bi bi-info-circle-fill"></i> About
                             </a>
                         </li>
                         <li @class('nav-item')>
-                            <a @class('nav-link d-flex align-items-center gap-1') href="">
+                            <a @class('nav-link d-flex align-items-center gap-1') href="{{ route('contacts') }}">
                                 <i class="bi bi-envelope-fill"></i> Contact
                             </a>
                         </li>
@@ -48,7 +48,7 @@
                             </a>
                         </li>
                         <li @class('nav-item')>
-                            <a @class('nav-link d-flex align-items-center gap-1') href="">
+                            <a @class('nav-link d-flex align-items-center gap-1') href="{{ route('login') }}">
                                 <i class="bi bi-person-badge-fill"></i> Staff
                             </a>
                         </li>
@@ -65,7 +65,12 @@
     <main>
         @yield('content')
     </main>
-    <footer @class('bg-dark text-white pt-5 pb-4 fade-section')>
+    <footer @class([
+    'bg-dark',
+    'text-white',
+    'pt-5',
+    'pb-4',
+    'fade-section' => !request()->routeIs('application') ])>
         <div class="container">
             <div class="row">
             {{-- PRODUCT Column --}}
