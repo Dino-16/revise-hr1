@@ -14,8 +14,10 @@ class Login extends Component
 
     public function login()
     {
-        if (Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
-            $user = Auth::user();
+        $credentials = ['email' => $this->email, 'password' => $this->password];
+
+        if (Auth::validate($credentials)) {
+            $user = Auth::getProvider()->retrieveByCredentials($credentials);
 
             // Generate OTP
             $otp = rand(100000, 999999);
@@ -36,6 +38,8 @@ class Login extends Component
             // Redirect to OTP verification component
             return redirect()->route('otp.verify');
         }
+
+        $this->addError('email', 'Invalid credentials.');
     }
 
 

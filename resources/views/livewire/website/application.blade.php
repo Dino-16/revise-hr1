@@ -90,13 +90,13 @@
 
                 <div @class(['col-md-12', 'mb-3'])>
                     <label for="resume" @class(['w-100'])>
-                        <input 
-                            wire:model="applicantResumeFile" 
-                            type="file" 
-                            accept=".pdf,.doc,.docx" 
-                            id="resume" 
-                            required 
-                            @class(['d-none']) 
+                        <input
+                            wire:model="applicantResumeFile"
+                            type="file"
+                            accept=".pdf,.doc,.docx"
+                            id="resume"
+                            required
+                            @class(['d-none'])
                         />
                         <div @class(['d-flex', 'flex-column', 'justify-content-center', 'align-items-center', 'p-5', 'border', 'rounded', 'bg-white', 'text-center']) @style(['cursor' => 'pointer', 'height' => '120px'])>
                             <i @class(['bi', 'bi-cloud-upload', 'fs-1', 'text-secondary', 'mb-2'])></i>
@@ -132,21 +132,21 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-check">
-                                <input 
-                                    class="form-check-input" 
-                                    type="checkbox" 
-                                    id="agreed-to-terms" 
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="agreed-to-terms"
                                     wire:model="agreedToTerms"
                                 >
                                 <label class="form-check-label" for="agreed-to-terms">
-                                    I agree to the 
+                                    I agree to the
                                     <a href="#termsAndConditions" class="text-decoration-underline" wire:click="viewTermsAndCondtions">terms and conditions</a>.
                                 </label>
                                 @error('agreedToTerms') <p class="text-danger ">{{ $message }}</p> @enderror
                             </div>
                         </div>
                         <div class="col-md-6">
-                                                
+
                             {{-- Submit Button --}}
                             <div @class(['text-end'])>
                                 <x-button-primary type="submit">Submit</x-button-primary>
@@ -196,13 +196,13 @@
             <hr class="my-4">
             <h4 class="fw-semibold text-dark">Our Promise</h4>
             <p>
-                Jetlouge Travel uses secure systems and follows industry best practices to keep your information safe. 
+                Jetlouge Travel uses secure systems and follows industry best practices to keep your information safe.
                 By using our services, you agree to the collection and use of your data as described in this statement.
             </p>
             <hr class="my-4">
             <h4 class="fw-semibold text-dark">Your Rights</h4>
             <p>
-                You may access, update, or request deletion of your personal information at any time. 
+                You may access, update, or request deletion of your personal information at any time.
                 Please contact our <strong>privacy team</strong> for assistance.
             </p>
         </div>

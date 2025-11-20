@@ -13,7 +13,7 @@ Route::view('/application', 'website.application')->name('application');
     //Auth routes
     Route::view('/login', 'auth.login')->name('login');
     Route::view('/register', 'auth.register')->name('register');
-    
+
 });
 
 Route::middleware(['auth'])->group( function() {
@@ -22,3 +22,4 @@ Route::middleware(['auth'])->group( function() {
 });
 
 Route::view('/otp-verification', 'auth.otp-verification')->name('otp.verify');
+

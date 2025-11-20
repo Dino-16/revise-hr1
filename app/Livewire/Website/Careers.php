@@ -7,7 +7,7 @@ use Livewire\Component;
 class Careers extends Component
 {
     public $showDetails = false;
-    
+
     public $jobs = [
         [
             'title' => 'Logistic Coordinator',
