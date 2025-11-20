@@ -25,7 +25,6 @@
             </div>
             <x-input-error :field="('password')" />
         </div>
-        {{-- 
         <div @class('mb-3 form-check d-flex justify-content-between')>
             <span>
                 <input type="checkbox" @class('form-check-input') id="rememberMe">
@@ -35,7 +34,6 @@
             </span>
             <a href="{{ route('register') }}">Register</a>
         </div>
-        --}}
         <button type="submit" @class('btn btn-login mb-3')>
             <i @class('bi bi-box-arrow-in-right me-2')></i>
             Sign In
