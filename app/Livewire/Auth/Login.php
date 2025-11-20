@@ -11,7 +11,7 @@ class Login extends Component
 {
     public $email;
     public $password;
-s
+
     public function login()
     {
         $credentials = ['email' => $this->email, 'password' => $this->password];
